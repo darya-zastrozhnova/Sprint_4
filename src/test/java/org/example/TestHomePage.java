@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -32,12 +33,8 @@ public class TestHomePage {
         HomePage homePage = new HomePage(driver);
         String currentWindowHandle = driver.getWindowHandle();
         homePage.clickOnLogoYandex();
+
         wait.until(webDriver -> webDriver.getWindowHandles().size() > 1);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
 
         for (String handle : driver.getWindowHandles()) {
             if (!handle.equals(currentWindowHandle)) {
@@ -70,11 +67,8 @@ public class TestHomePage {
         // Задержка для загрузки страницы, картинка с нот фоунд открывается и при верном номере заказа.
         // И по этому тест проходит проверку для верного заказа.
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(HomePage.locatorNotFound));
 
 
         Assert.assertTrue(driver.findElement(HomePage.locatorNotFound).isDisplayed());
