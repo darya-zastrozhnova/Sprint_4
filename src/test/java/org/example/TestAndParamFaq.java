@@ -1,9 +1,9 @@
 package org.example;
 
 import org.example.locators_page_object.HomePage;
-import org.junit.AfterClass;
+import org.junit.After;
 import org.junit.Assert;
-import org.junit.BeforeClass;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -17,8 +17,8 @@ import java.time.Duration;
 public class TestAndParamFaq {
     private static WebDriver driver;
 
-    @BeforeClass
-    public static void setUp() {
+    @Before
+    public void setUp() {
         // driver = new FirefoxDriver();
         driver = new ChromeDriver();
         driver.get("https://qa-scooter.praktikum-services.ru/");
@@ -57,8 +57,9 @@ public class TestAndParamFaq {
     }
 
 
-    @AfterClass
-    public static void teardown() {
+    @After
+    public void teardown() {
+
         driver.quit();
     }
 
