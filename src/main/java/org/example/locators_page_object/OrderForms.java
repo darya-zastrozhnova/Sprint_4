@@ -112,10 +112,10 @@ public class OrderForms {
             case "шестеро суток":
             case "семеро суток":
                 wait.until(ExpectedConditions.visibilityOfElementLocated(locatorMenuRentalPeriod));
-                WebElement element = driver.findElement((By.xpath(".//div[text()='" + dey + "']")));
+                String xpath = String.format(".//div[text()='%s']", dey);
+                WebElement element = driver.findElement(By.xpath(xpath));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
-                driver.findElement(By.xpath(".//div[text()='" + dey + "']")).click();
-                break;
+                element.click();
         }
     }
 
