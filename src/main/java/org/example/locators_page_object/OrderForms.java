@@ -6,10 +6,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class orderForms {
+public class OrderForms {
     private final WebDriver driver;
 
-    public orderForms(WebDriver driver) {
+    public OrderForms(WebDriver driver) {
         this.driver = driver;
     }
 

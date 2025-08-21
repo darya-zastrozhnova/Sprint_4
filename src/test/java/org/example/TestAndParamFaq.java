@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.locators_page_object.homePage;
+import org.example.locators_page_object.HomePage;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -23,7 +23,7 @@ public class TestAndParamFaq {
         driver = new ChromeDriver();
         driver.get("https://qa-scooter.praktikum-services.ru/");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
-        homePage.waitHederHomePage(wait);
+        HomePage.waitHederHomePage(wait);
     }
 
     private final int number;
@@ -49,7 +49,7 @@ public class TestAndParamFaq {
 
     @Test
     public void autotestAndParamFAQ() {
-        homePage homePage = new homePage(driver);
+        HomePage homePage = new HomePage(driver);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
         homePage.scrollAndClickQuestionNumber(wait, number);
         String actualText = homePage.getTextAnswerNumber(wait, number);

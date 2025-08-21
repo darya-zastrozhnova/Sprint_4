@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.locators_page_object.homePage;
-import org.example.locators_page_object.orderForms;
+import org.example.locators_page_object.HomePage;
+import org.example.locators_page_object.OrderForms;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -61,11 +61,11 @@ public class TestOrderPage {
     @Test
     public void testOrderForms() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
-        homePage.waitHederHomePage(wait);
-        homePage homePage = new homePage(driver);
+        HomePage.waitHederHomePage(wait);
+        HomePage homePage = new HomePage(driver);
         homePage.clickButtonOrderHederOrDown(button);
-        orderForms orderForms = new orderForms(driver);
-        org.example.locators_page_object.orderForms.waitHederOrderForms(wait);
+        OrderForms orderForms = new OrderForms(driver);
+        OrderForms.waitHederOrderForms(wait);
         orderForms.sendName(name);
         orderForms.sendFamilia(familia);
         orderForms.sendAddress(address);

@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.locators_page_object.orderForms;
+import org.example.locators_page_object.OrderForms;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -49,7 +49,7 @@ public class TestFormPageFieldValidation {
 
     @Test
     public void testOrderForms() {
-        orderForms orderForms = new orderForms(driver);
+        OrderForms orderForms = new OrderForms(driver);
 
         orderForms.sendName(name);
         orderForms.sendFamilia(familia);
