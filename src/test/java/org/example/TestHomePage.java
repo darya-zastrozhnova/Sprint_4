@@ -1,14 +1,11 @@
 package org.example;
 
-import org.example.locatorsPageObject.orderForms;
-import org.example.locatorsPageObject.homePage;
-import org.junit.*;
+import org.example.locators_page_object.homePage;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -80,7 +77,7 @@ public class TestHomePage {
         }
 
 
-        Assert.assertTrue(driver.findElement(org.example.locatorsPageObject.homePage.locatorNotFound).isDisplayed());
+        Assert.assertTrue(driver.findElement(org.example.locators_page_object.homePage.locatorNotFound).isDisplayed());
     }
 
     @After

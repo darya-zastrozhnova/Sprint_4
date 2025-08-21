@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.locatorsPageObject.homePage;
-import org.example.locatorsPageObject.orderForms;
+import org.example.locators_page_object.homePage;
+import org.example.locators_page_object.orderForms;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -65,7 +65,7 @@ public class TestOrderPage {
         homePage homePage = new homePage(driver);
         homePage.clickButtonOrderHederOrDown(button);
         orderForms orderForms = new orderForms(driver);
-        org.example.locatorsPageObject.orderForms.waitHederOrderForms(wait);
+        org.example.locators_page_object.orderForms.waitHederOrderForms(wait);
         orderForms.sendName(name);
         orderForms.sendFamilia(familia);
         orderForms.sendAddress(address);

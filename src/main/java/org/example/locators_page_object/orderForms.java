@@ -1,4 +1,4 @@
-package org.example.locatorsPageObject;
+package org.example.locators_page_object;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;

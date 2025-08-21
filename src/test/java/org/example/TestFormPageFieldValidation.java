@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.locatorsPageObject.orderForms;
+import org.example.locators_page_object.orderForms;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -9,8 +9,6 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
 
 
 @RunWith(Parameterized.class)

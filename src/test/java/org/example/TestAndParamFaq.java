@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.locatorsPageObject.homePage;
+import org.example.locators_page_object.homePage;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
